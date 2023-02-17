@@ -2,7 +2,7 @@
 
 /**
  * main - enter point
- * Reaturn: Always 0 (success)
+ * Return: Always 0 (success)
  *
  * C basic program that print all lower case alphabet and upper case ones
  */
