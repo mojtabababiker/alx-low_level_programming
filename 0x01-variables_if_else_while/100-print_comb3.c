@@ -21,11 +21,11 @@ int main(void)
 
 	for (i = 48 ; i <= 57 ; i++)
 	{
-		for (j = i+1 ; j <= 57 ; j++)
+		for (j = i + 1 ; j <= 57 ; j++)
 		{
 			putchar((char)i);
 			putchar((char)j);
-			if (i != 57-1)
+			if (i != 57 - 1)
 			{
 				putchar((char)kma);
 				putchar((char)sp);

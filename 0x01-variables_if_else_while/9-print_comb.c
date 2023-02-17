@@ -23,8 +23,8 @@ int main(void)
 		putchar((char)i);
 		if (i != 57)
 		{
-			putchar((char)sp);
 			putchar((char)kma);
+			putchar((char)sp);
 		}
 	}
 
