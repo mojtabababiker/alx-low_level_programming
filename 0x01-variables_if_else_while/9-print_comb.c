@@ -9,10 +9,10 @@
 
 int main(void)
 {
-	char i;
-	char kma;
-	char nl;
-	char sp;
+	int i;
+	int kma;
+	int nl;
+	int sp;
 
 	kma = 44;
 	nl = 10;
@@ -20,14 +20,14 @@ int main(void)
 
 	for (i = 48 ; i <= 57 ; i++)
 	{
-		putchar(i);
+		putchar((char)i);
 		if (i != 57)
 		{
-			putchar(sp);
-			putchar(kma);
+			putchar((char)sp);
+			putchar((char)kma);
 		}
 	}
 
-	putchar(nl);
+	putchar((char)nl);
 	return (0);
 }

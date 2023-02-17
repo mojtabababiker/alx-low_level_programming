@@ -9,11 +9,11 @@
 
 int main(void)
 {
-	char i;
-	char j;
-	char kma;
-	char sp;
-	char nl;
+	int i;
+	int j;
+	int kma;
+	int sp;
+	int nl;
 
 	kma = 44;
 	sp = 32;
@@ -23,16 +23,16 @@ int main(void)
 	{
 		for (j = i+1 ; j <= 57 ; j++)
 		{
-			putchar(i);
-			putchar(j);
+			putchar((char)i);
+			putchar((char)j);
 			if (i != 57-1)
 			{
-				putchar(kma);
-				putchar(sp);
+				putchar((char)kma);
+				putchar((char)sp);
 			}
 		}
 	}
 
-	putchar(nl);
+	putchar((char)nl);
 	return (0);
 }
