@@ -9,30 +9,30 @@
 
 int main(void)
 {
-	char i;
-	char j;
-	char k;
-	char kma;
-	char sp;
-	char nl;
+	int i;
+	int j;
+	int k;
+	int kma;
+	int sp;
+	int nl;
 
 	kma = 44;
 	sp = 32;
 	nl = 10;
 
-	for (i = 48 ; i  <= 50 ; i++)
+	for (i = 48 ; i  <= 57 ; i++)
 	{
 		for (j = i + 1 ; j <= 57 ; j++)
 		{
-			for (k = j + 1 ; k <= 57 ; j++)
+			for (k = j + 1 ; k <= 57 ; k++)
 			{
-				putchar(i);
-				putchar(j);
-				putchar(k);
-				if (k != i - 3)
+				putchar((char)i);
+				putchar((char)j);
+				putchar((char)k);
+				if (k != i - 4)
 				{
-					putchar(kma);
-					putchar(sp);
+					putchar((char)kma);
+					putchar((char)sp);
 				}
 			}
 		}
