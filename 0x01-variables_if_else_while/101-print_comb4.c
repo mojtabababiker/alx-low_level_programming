@@ -29,7 +29,7 @@ int main(void)
 				putchar((char)i);
 				putchar((char)j);
 				putchar((char)k);
-				if (k != i - 4)
+				if (i != 55 )
 				{
 					putchar((char)kma);
 					putchar((char)sp);
