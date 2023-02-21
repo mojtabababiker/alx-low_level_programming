@@ -9,9 +9,7 @@
 int putchr(void)
 {
 	int i;
-	char ch[8];
-
-	ch[] = "_putchar";
+	int ch[] = {95, 112, 117, 116, 99, 104, 97, 114};
 
 	for (i = 0 ; i < 8 ; i++)
 	{
