@@ -4,7 +4,7 @@
  * print_last_digit - function that return number last digit
  * Return: last_digit
  * @num: arg 1
- *
+ * 
  */
 
 int print_last_digit(int num)
@@ -18,7 +18,8 @@ int print_last_digit(int num)
 		if (last_digit == (char)i)
 		{
 			_putchar(i);
-			return (i);
+			break;
 		}
 	}
+	return last_digit;
 }
