@@ -14,7 +14,7 @@ int print_last_digit(int num)
 	last_digit = num % 10;
 	for (i = 48 ; i <= 57 ; i++)
 	{
-		if (last_digit == (int)i)
+		if (last_digit == i)
 			_putchar(i);
 	}
 	return (last_digit);
