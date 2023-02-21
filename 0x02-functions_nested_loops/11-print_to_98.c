@@ -24,10 +24,12 @@ void print_to_98(int n)
  * down_to_limit - when the enterd number is greater than 98 use this func
  * @lim: local variable that holds the limit value
  * @n: the number tht entered by the user
+ * @i: loop counter
  */
 
 void down_to_limit(int n, int lim)
 {
+	int i;
 	for (i = n ; i >= lim ; i--)
 	{
 		printf("%d", i);
@@ -42,10 +44,12 @@ void down_to_limit(int n, int lim)
  * up_to_limit - when the enterd number is greater than 98 use this func
  * @lim: local variable that holds the limit value
  * @n: the number tht entered by the user
+ * @i: loop counter
  */
 
 void up_to_limit(int n, int lim)
 {
+	int i;
 	for (i = n ; i <= lim ; i++)
 	{
 		printf("%d", i);
