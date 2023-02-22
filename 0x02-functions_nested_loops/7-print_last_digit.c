@@ -9,8 +9,6 @@
 int print_last_digit(int num)
 {
 	int last_digit;
-	char i;
-	int j;
 
 	if (num < 0)
 		num = -num;
