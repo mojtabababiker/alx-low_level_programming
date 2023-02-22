@@ -12,6 +12,9 @@ int print_last_digit(int num)
 	char i;
 	int j;
 
+	if (num < 0)
+		num = -num;
+	
 	last_digit = num % 10;
 	for (i = 48, j = 0 ; i <= 57 ; i++, j++)
 	{
