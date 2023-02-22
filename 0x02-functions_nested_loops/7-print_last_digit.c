@@ -16,18 +16,7 @@ int print_last_digit(int num)
 		num = -num;
 
 	last_digit = num % 10;
-	for (i = 48, j = 0 ; i <= 57 ; i++, j++)
-	{
-		if (last_digit == j)
-		{
-			_putchar(i);
-			break;
-		}
-		else
-		{
-			_putchar(56);
-			return (8);
-		}
-	}
+
+	_putchar(last_digit + '0');
 	return (last_digit);
 }
