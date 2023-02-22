@@ -34,7 +34,9 @@ void times_table(void)
 			{
 				_putchar(' ');
 				print(result);
-				_putchar(',');
+
+				if (j < 9)
+					_putchar(',');
 			}
 			else
 			{
@@ -48,7 +50,9 @@ void times_table(void)
 					_putchar(' ');
 					_putchar(' ');
 					_putchar('0' + result);
-					_putchar(',');
+
+					if (j < 9)
+						_putchar(',');
 				}
 			}
 		}
