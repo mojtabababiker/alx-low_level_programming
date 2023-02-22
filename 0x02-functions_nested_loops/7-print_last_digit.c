@@ -10,6 +10,11 @@ int print_last_digit(int num)
 {
 	int last_digit;
 
+	if (num == INT_MIN)
+	{
+		_putchar('8');
+		return (8);
+	}
 	if (num < 0)
 		num = -num;
 
