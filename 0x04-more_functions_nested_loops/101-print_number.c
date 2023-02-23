@@ -9,18 +9,22 @@ void mult_digit(int n);
 
 void print_number(int n)
 {
-	if (n < 48)
+	unsigned int temp;
+
+	temp = n;
+
+	if (n < 0)
 	{
 		_putchar('-');
-		n = -n;
+		temp = -temp;
 	}
-	if (n <= 57)
+	if (temp <= 9)
 	{
-		_putchar(n + '0');
+		_putchar(temp + '0');
 	}
-	else if (n > 57)
+	else if (temp > 9)
 	{
-		mult_digit(n);
+		mult_digit(temp);
 	}
 	_putchar(10);
 }
@@ -32,9 +36,13 @@ void print_number(int n)
 
 void mult_digit(int n)
 {
-	if (n / 10)
+	unsigned int temp;
+
+	temp = n;
+
+	if (temp / 10)
 	{
-		mult_digit(n / 10);
+		mult_digit(temp / 10);
 	}
-	_putchar((n % 10) + '0');
+	_putchar((temp % 10) + '0');
 }
