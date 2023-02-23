@@ -3,13 +3,21 @@
 /**
  * _print - print multi-digit number using _putchar
  * @mult: multi digit number
+ * @digit: number of difits
+ * @ocall: original call, print the spaces only on the first function call
  */
 
-void _print(int mult)
+void _print(int mult, int digit, int ocall)
 {
+	if (ocall)
+	{
+		for (i = 0 ; i < (4 - digit) ; i++)
+			_putchar(' ');
+	}
 	if (mult / 10)
 	{
-		_print(mult / 10);
+		ocall = 0;
+		_print(mult / 10, digit, ocall);
 	}
 
 	_putchar((mult % 10) + '0');
@@ -24,6 +32,7 @@ void print_times_table(int num)
 {
 	int i;
 	int mult;
+
 	if ((num >= 0) && (num <= 15))
 	{
 		for (i = 0 ; i <= num ; i++)
@@ -39,34 +48,17 @@ void print_times_table(int num)
 				else
 				{
 					if (mult <= 9)
-					{
-						_putchar(' ');
-						_putchar(' ');
-						_putchar(' ');
-						_putchar(mult + '0');
-						_putchar(',');
-					}
+						_print(mult, 1, 1);
 					else if ((mult > 9) && (mult < 100))
-					{
-						_putchar(' ');
-						_putchar(' ');
-						_print(mult);
-						_putchar(',');
-					}
-					else if ((mult > 100) && (mult < 1000))
-					{
-						_putchar(' ');
-						_print(mult);
-						_putchar(',');
-					}
+						_print(mult, 10, 1);
+					else if ((mult > 99) && (mult < 1000))
+						_print(mult, 100, 1);
 					else
-					{
-						_print(mult);
-						_putchar(',');
-					}
+						_print(mult, 1000, 1);
+					_putchar(',');
 				}
 			}
-			_putchar('\n');
+			_putchar('\n');/*new line at end of each number "i"*/
 		}
 	}
 
