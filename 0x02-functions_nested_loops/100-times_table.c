@@ -11,13 +11,10 @@ void _print(int mult, int digit, int ocall)
 {
 	int i;
 
-	if (ocall)
+	if ((ocall) && (digit < 4))
 	{
-		if (digit < 4)
-		{
-			for (i = 0 ; i < (4 - digit) ; i++)
-				_putchar(' ');
-		}
+		for (i = 0 ; i < (4 - digit) ; i++)
+			_putchar(' ');
 	}
 	if (mult / 10)
 	{
@@ -56,12 +53,13 @@ void print_times_table(int num)
 					if (mult <= 9)
 						_print(mult, 1, 1);
 					else if ((mult > 9) && (mult < 100))
-						_print(mult, 10, 1);
+						_print(mult, 2, 1);
 					else if ((mult > 99) && (mult < 1000))
-						_print(mult, 100, 1);
+						_print(mult, 3, 1);
 					else
-						_print(mult, 1000, 1);
-					_putchar(',');
+						_print(mult, 4, 1);
+					if (j != num)
+						_putchar(',');
 				}
 			}
 			_putchar('\n');/*new line at end of each number "i"*/
