@@ -27,22 +27,22 @@ void print_fiba(unsigned long int finum)
 	if (finum > 2)
 	{
 		unsigned long int prev[2];
-		unsigned long int i;
 		unsigned long int temp;
 		unsigned long int sum;
 
 		sum = 2;
 		prev[0] = 1;
 		prev[1] = 2;
-		i = 0;
-		while (i < finum)
+
+		while (1)
 		{
 			temp = prev[0] + prev[1];
-			if (temp % 2 == 0)
+			if ((temp % 2) == 0)
 				sum = sum + temp;
+			if (temp >= finum)
+				break;
 			prev[0] = prev[1];
 			prev[1] = temp;
-			i++;
 		}
 		printf("%lu\n", sum);
 	}
