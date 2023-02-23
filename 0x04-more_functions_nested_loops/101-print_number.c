@@ -9,16 +9,16 @@ void mult_digit(int n);
 
 void print_number(int n)
 {
-	if (n < 0)
+	if (n < 48)
 	{
 		_putchar('-');
 		n = -n;
 	}
-	if (n <= 9)
+	if (n <= 57)
 	{
 		_putchar(n + '0');
 	}
-	else if (n > 9)
+	else if (n > 57)
 	{
 		mult_digit(n);
 	}
