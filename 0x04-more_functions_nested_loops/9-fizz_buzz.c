@@ -27,7 +27,7 @@ int main(void)
 				printf(" ");
 			break;
 		case 2:
-			printf("Fuzz ");
+			printf("Fizz ");
 			break;
 		case 3:
 			printf("Buzz");
