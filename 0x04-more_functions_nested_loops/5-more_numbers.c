@@ -4,12 +4,14 @@
  * multdigit - prints numbers that has more than one digit
  * @num: multydigit number
  */
+
 void multdigit(int num)
 {
 	if (num / 10)
 		multdigit(num / 10);
 	_putchar(num % 10 + '0');
 }
+
 /**
  * more_numbers - prints all numbers from `0` to `14` ten times
  */
@@ -27,4 +29,5 @@ void more_numbers(void)
 			_putchar(j + '0');
 		}
 	}
+	_putchar('\n');
 }
