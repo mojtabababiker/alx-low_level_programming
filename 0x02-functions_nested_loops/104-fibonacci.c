@@ -26,10 +26,10 @@ void print_fiba(int finum)
 {
 	if (finum > 2)
 	{
-		unsigned int prev1;
-		unsigned int prev2;
+		unsigned long int prev1;
+		unsigned long int prev2;
 		int i;
-		unsigned int temp;
+		unsigned long int temp;
 
 		prev1 = 1;
 		prev2 = 2;
@@ -38,16 +38,16 @@ void print_fiba(int finum)
 		{
 			if (i == 0)
 			{
-				printf("%u, ", prev1);
+				printf("%lu, ", prev1);
 			}
 			else if (i == 1)
 			{
-				printf("%u, ", prev2);
+				printf("%lu, ", prev2);
 			}
 			else
 			{
 				temp = prev1 + prev2;
-				printf("%u", temp);
+				printf("%lu", temp);
 				if (i != 98)
 					printf(", ");
 				prev1 = prev2;
