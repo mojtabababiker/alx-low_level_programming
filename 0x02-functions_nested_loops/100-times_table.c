@@ -46,7 +46,8 @@ void print_times_table(int num)
 				if (j == 0)
 				{
 					_putchar(mult + '0');
-					_putchar(',');
+					if (num != 0)
+						_putchar(',');
 				}
 				else
 				{
