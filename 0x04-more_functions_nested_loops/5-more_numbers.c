@@ -9,7 +9,7 @@ void multdigit(int num)
 {
 	if (num / 10)
 		multdigit(num / 10);
-	_putchar(num % 10 + '0');
+	_putchar((num % 10) + '0');
 }
 
 /**
@@ -26,7 +26,8 @@ void more_numbers(void)
 		{
 			if (j > 9)
 				multdigit(j);
-			_putchar(j + '0');
+			else
+				_putchar(j + '0');
 		}
 	}
 	_putchar('\n');
