@@ -34,7 +34,7 @@ void print_fiba(int finum)
 		prev1 = 1;
 		prev2 = 2;
 		i = 0;
-		while (i < 98)
+		while (i <= 98)
 		{
 			if (i == 0)
 			{
@@ -48,7 +48,7 @@ void print_fiba(int finum)
 			{
 				temp = prev1 + prev2;
 				printf("%u", temp);
-				if (i != 97)
+				if (i != 98)
 					printf(", ");
 				prev1 = prev2;
 				prev2 = temp;
