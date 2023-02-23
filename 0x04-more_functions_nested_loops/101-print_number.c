@@ -18,31 +18,10 @@ void print_number(int n)
 		_putchar('-');
 		temp = -temp;
 	}
-	if (temp <= 9)
-	{
-		_putchar(temp + '0');
-	}
-	else if (temp > 9)
-	{
-		mult_digit(temp);
-	}
-	_putchar(10);
-}
-
-/**
- * mult_digit - print multi digits numbers
- * @n: the multi digit number
- */
-
-void mult_digit(int n)
-{
-	unsigned int temp;
-
-	temp = n;
-
 	if (temp / 10)
 	{
-		mult_digit(temp / 10);
+		print_number(temp / 10);
 	}
-	_putchar((temp % 10) + '0');
+	_putchar(temp % 10 + '0');
+
 }
