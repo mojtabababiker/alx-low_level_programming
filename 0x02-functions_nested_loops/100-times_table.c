@@ -9,10 +9,15 @@
 
 void _print(int mult, int digit, int ocall)
 {
+	int i;
+
 	if (ocall)
 	{
-		for (i = 0 ; i < (4 - digit) ; i++)
-			_putchar(' ');
+		if (digit < 4)
+		{
+			for (i = 0 ; i < (4 - digit) ; i++)
+				_putchar(' ');
+		}
 	}
 	if (mult / 10)
 	{
@@ -31,6 +36,7 @@ void _print(int mult, int digit, int ocall)
 void print_times_table(int num)
 {
 	int i;
+	int j;
 	int mult;
 
 	if ((num >= 0) && (num <= 15))
