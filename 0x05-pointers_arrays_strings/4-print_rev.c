@@ -11,21 +11,18 @@ int _lenstr(char *s);
 void print_rev(char *s)
 {
 	unsigned long int length;
-	int i;
+	unsigned long int i;
 	int chr;
 
 	length = _lenstr(s);
 
-	if (length >= 0)
-	{
-		for (i = 0 ; i < length ; i++)
-		{
-			chr = *(s - i);
+	for (i = 0 ; i < length ; i++)
+       	{
+       		chr = *(s - i);
 
-			_putchar(chr);
-		}
-		_putchar('\n');
-	}
+       		_putchar(chr);
+       	}
+       	_putchar('\n');
 }
 
 /**
@@ -34,7 +31,7 @@ void print_rev(char *s)
  * Return: string length
  */
 
-int _lenstr(char *s)
+unsigned long int _lenstr(char *s)
 {
 	unsigned long int length;
 
