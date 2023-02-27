@@ -3,48 +3,53 @@
 unsigned long int _lenstr(char *s);
 
 /**
- * rev_strings - save string s in reversed order
+ * rev_string - save string s in reversed order
  * @s: string variable pointer
  * Return: void
  */
 
 void rev_string(char *s)
 {
-	unsigned long int length;
+	unsigned long int _len;
 	unsigned long int i;
 
-	length = _lenstr(s);
+	_len = _lenstr(s);
+	_len++;
 
-	char reverse_s[length + 1];
+	char reverse_s[_len];
 
-	for (i = 0 ; i < length ; i++)
+	for (i = 0 ; i < _len - 1 ; i++)
+	{
+		s = s + i;
+	}
+	for (i = 0 ; i < _len - 1 ; i++)
 	{
 		reverse_s[i] = *s;
 		s = s - 1;
 	}
-	for (i = 0 ; i < length ; i++)
+	for (i = 0 ; i < _len - 1 ; i++)
 	{
 		*(s + i) = reverse_s[i];
 	}
 }
 
 /**
- * _lenstr - calculate the length of tring
+ * _lenstr - calculate the _len of tring
  * @s: string variable pointer
- * Return: string length
+ * Return: string _len
  */
 
 unsigned long int _lenstr(char *s)
 {
-	unsigned long int length;
+	unsigned long int _len;
 
-	length = 0;
+	_len = 0;
 
 	while (*s != '\0')
 	{
-		length++;
+		_len++;
 		s++;
 	}
 	s--;
-	return (length);
+	return (_len);
 }

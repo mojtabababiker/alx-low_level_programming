@@ -17,12 +17,17 @@ void print_rev(char *s)
 	length = _lenstr(s);
 
 	for (i = 0 ; i < length ; i++)
-       	{
-       		chr = *(s - i);
+	{
+		s++;
+	}
 
-       		_putchar(chr);
-       	}
-       	_putchar('\n');
+	for (i = 0 ; i < length ; i++)
+	{
+		chr = *(s - i);
+
+		_putchar(chr);
+	}
+	_putchar('\n');
 }
 
 /**
@@ -42,8 +47,6 @@ unsigned long int _lenstr(char *s)
 		length++;
 		s++;
 	}
-
-	s = s - 1;
 
 	return (length);
 }
