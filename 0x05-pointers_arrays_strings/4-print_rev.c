@@ -1,6 +1,6 @@
 #include "main.h"
 
-int _lenstr(char *s);
+unsigned long int _lenstr(char *s);
 
 /**
  * print_rev - print string s in a reversed order followed by new line
