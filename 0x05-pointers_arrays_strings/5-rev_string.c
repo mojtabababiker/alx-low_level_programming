@@ -25,7 +25,7 @@ void rev_string(char *s)
 		temp = *s;
 		*s = *(reverse_s - i);
 		*(reverse_s - i) = temp;
-		s++
+		s++;
 	}
 }
 /**
