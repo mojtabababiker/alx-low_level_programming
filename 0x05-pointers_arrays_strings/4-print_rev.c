@@ -16,12 +16,12 @@ void print_rev(char *s)
 
 	length = _lenstr(s);
 
-	for (i = 0 ; i < length ; i++)
+	for (i = 0 ; i <= length ; i++)
 	{
 		s++;
 	}
 
-	for (i = 0 ; i < length ; i++)
+	for (i = 0 ; i <= length ; i++)
 	{
 		chr = *(s - i);
 

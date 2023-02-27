@@ -3,7 +3,7 @@
 unsigned long int _lenstr(char *s);
 
 /**
- * rev_string - save string s in reversed order
+ * rev_string - save string s in reversed order using bupple method
  * @s: string variable pointer
  * Return: void
  */
@@ -12,27 +12,24 @@ void rev_string(char *s)
 {
 	unsigned long int _len;
 	unsigned long int i;
+	char *reverse_s;
+	char temp;
 
 	_len = _lenstr(s);
-	_len++;
+	reverse_s = s + _len;
 
-	char reverse_s[_len];
+	for (i = 0 ; i <= _len ; i++)
+	{
+		if ((s + i) == (reverse_s - i))
+		{
+			break;
+		}
 
-	for (i = 0 ; i < _len - 1 ; i++)
-	{
-		s = s + i;
-	}
-	for (i = 0 ; i < _len - 1 ; i++)
-	{
-		reverse_s[i] = *s;
-		s = s - 1;
-	}
-	for (i = 0 ; i < _len - 1 ; i++)
-	{
-		*(s + i) = reverse_s[i];
+		temp = *(s + i);
+		*(s + i) = *(reverse_s - i);
+		*(reverse_s - i) = temp;
 	}
 }
-
 /**
  * _lenstr - calculate the _len of tring
  * @s: string variable pointer
