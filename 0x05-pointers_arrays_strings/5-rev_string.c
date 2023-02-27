@@ -1,6 +1,6 @@
 #include "main.h"
 
-int _lenstr(char *s);
+unsigned long int _lenstr(char *s);
 
 /**
  * rev_strings - save string s in reversed order
@@ -10,8 +10,8 @@ int _lenstr(char *s);
 
 void rev_string(char *s)
 {
-	int length;
-	int i;
+	unsigned long int length;
+	unsigned long int i;
 
 	length = _lenstr(s);
 
@@ -34,10 +34,9 @@ void rev_string(char *s)
  * Return: string length
  */
 
-int _lenstr(char *s)
+unsigned long int _lenstr(char *s)
 {
-	int length;
-	int i;
+	unsigned long int length;
 
 	length = 0;
 
