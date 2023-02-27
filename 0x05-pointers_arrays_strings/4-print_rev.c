@@ -10,7 +10,7 @@ int _lenstr(char *s);
 
 void print_rev(char *s)
 {
-	int length;
+	unsigned long long int length;
 	int i;
 	int chr;
 
@@ -36,7 +36,7 @@ void print_rev(char *s)
 
 int _lenstr(char *s)
 {
-	int length;
+	unsigned long long int length;
 
 	length = 0;
 
