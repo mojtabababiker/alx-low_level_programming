@@ -16,15 +16,19 @@ void rev_string(char *s)
 	char temp;
 
 	_len = _lenstr(s);
+	reverse_s = s;
+
 	for (i = 0 ; i < _len ; i++)
 	{
-		reverse_s = s + 1;
+		s = s + 1;
 	}
 	for (i = 0 ; i <= _len ; i++)
 	{
-		temp = *(s + i);
-		*(s + i) = *(reverse_s - i);
-		*(reverse_s - i) = temp;
+		temp = *(reverse_s + i);
+		*(reverse_s + i) = *(s - i);
+		*(s - i) = temp;
+		if (reverse_s + i == s - i)
+			break;
 	}
 }
 /**
