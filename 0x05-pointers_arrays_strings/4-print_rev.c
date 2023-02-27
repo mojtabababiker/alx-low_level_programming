@@ -14,7 +14,7 @@ void print_rev(char *s)
 	int i;
 	int chr;
 
-	length = _lenstr(*s);
+	length = _lenstr(s);
 
 	if (length >= 0)
 	{
@@ -40,7 +40,7 @@ int _lenstr(char *s)
 
 	length = 0;
 
-	while(*s != '\0')
+	while (*s != '\0')
 	{
 		length++;
 		s++;

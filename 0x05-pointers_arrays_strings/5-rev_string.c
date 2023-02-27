@@ -13,7 +13,7 @@ void rev_string(char *s)
 	int length;
 	int i;
 
-	length = _lenstr(*s);
+	length = _lenstr(s);
 
 	char reverse_s[length + 1];
 
@@ -41,7 +41,7 @@ int _lenstr(char *s)
 
 	length = 0;
 
-	while(*s != '\0')
+	while (*s != '\0')
 	{
 		length++;
 		s++;
