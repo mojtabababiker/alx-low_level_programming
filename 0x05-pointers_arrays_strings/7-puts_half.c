@@ -22,7 +22,7 @@ void puts_half(char *str)
 	{
 		n = (_len - 1) / 2;
 
-		for (i = (_len - n) ; i <= _len ; i++)
+		for (i = (_len - n) ; i < _len ; i++)
 		{
 			chr = *(str + i);
 
@@ -33,7 +33,7 @@ void puts_half(char *str)
 	{
 		n = _len / 2;
 
-		for (i = n ; i <= _len ; i++)
+		for (i = n ; i < _len ; i++)
 		{
 			chr = *(str + i);
 
