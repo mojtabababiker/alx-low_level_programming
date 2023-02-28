@@ -32,7 +32,7 @@ void puts2(char *str)
 
 unsigned long int _lenstr(char *s)
 {
-	unsigned long in _len;
+	unsigned long int _len;
 
 	_len = 0;
 
