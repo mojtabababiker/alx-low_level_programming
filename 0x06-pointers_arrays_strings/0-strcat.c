@@ -11,9 +11,9 @@ char *_strcat(char *dest, char *src)
 {
 	char *catstr;
 
-	catstr = *dest;
+	catstr = dest;
 
-	while(*src != '\0')
+	while (*src != '\0')
 	{
 		if (*dest == '\0')
 		{
