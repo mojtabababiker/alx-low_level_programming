@@ -13,6 +13,7 @@ char *leet(char *str)
 
 	char letters[11] = "aAeEoOtTlL";
 	int code[10] = {4, 4, 3, 3, 0, 0, 7, 7, 1, 1,};
+
 	codedstr = str;
 
 	while (*str != '\0')
