@@ -49,7 +49,7 @@ int chkword(char c)
 {
 	if (c == ',' || c == ';' || c == '.' || c == '!' || c == '?')
 		return (1);
-	else if (c == '(' || c == ')' || c == '}' || c == '}' || c == '"')
+	else if (c == '(' || c == ')' || c == '{' || c == '}' || c == '"')
 		return (1);
 	else if (c == ' ' || c == '\t' || c == '\n')
 		return (1);
