@@ -51,7 +51,7 @@ int chkword(char c)
 		return (1);
 	else if (c == '(' || c == ')' || c == '{' || c == '}' || c == 34)
 		return (1);
-	else if (c == 32 || c == 9 || c == 10)
+	else if (c == 32 || c == 9 || c == 10 || c == 13)
 		return (1);
 	else
 		return (0);
