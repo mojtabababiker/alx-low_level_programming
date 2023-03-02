@@ -49,9 +49,9 @@ int chkword(char c)
 {
 	if (c == ',' || c == ';' || c == '.' || c == '!' || c == '?')
 		return (1);
-	else if (c == '(' || c == ')' || c == '{' || c == '}' || c == '"')
+	else if (c == '(' || c == ')' || c == '{' || c == '}' || c == 34)
 		return (1);
-	else if (c == ' ' || c == '\t' || c == '\n')
+	else if (c == 32 || c == 9 || c == 10)
 		return (1);
 	else
 		return (0);
