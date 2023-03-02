@@ -15,6 +15,9 @@ char *cap_string(char *str)
 
 	cwstr = str;
 
+	if (*str >= 'a' && *str <= 'z')
+		*str = 'A' + (*str - 'a');
+
 	while (*str != '\0')
 	{
 		word = chkword(*str);
