@@ -17,14 +17,14 @@ char *rot13(char *str)
 	{
 		for (i = 0 ; i <= 13 ; i++)
 		{
-			if (*str >= 'a' && *str <= 'm' ||
-			    *str >= 'A' && *str <= 'M')
+			if ((*str >= 'a' && *str <= 'm') ||
+			    (*str >= 'A' && *str <= 'M'))
 			{
 				*str = *str + 13;
 				break;
 			}
-			else if (*str >= 'n' && *str <= 'z' ||
-				 *str >= 'N' && *str <= 'Z')
+			else if ((*str >= 'n' && *str <= 'z') ||
+				 (*str >= 'N' && *str <= 'Z'))
 			{
 				*str = *str - 13;
 				break;
