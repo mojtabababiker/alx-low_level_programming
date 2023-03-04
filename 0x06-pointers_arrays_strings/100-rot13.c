@@ -11,24 +11,35 @@ char *rot13(char *str)
 	int i;
 	char *codedstr;
 
-	char first13[] = "abcdefghijklm";
-	char sec13[] = "nlopqrstuvwxyz";
-
 	codedstr = str;
 
 	while (*str != '\0')
 	{
 		for (i = 0 ; i <= 13 ; i++)
 		{
-			if (*str == first13[i])
+			if (*str >= 'a' && *str <= 'm')
 			{
-				*str = sec13[i];
+				*str = *str + 13;
 				break;
 			}
-			else if (*str == sec13[i])
+		       	else if (*str >= 'n' && *str <= 'z')
 			{
-				*str = first13{i];
+				*str = *str - 13;
 				break;
+			}
+			else if (*str >= 'A' && *str <= 'M')
+			{
+				*str = *str + 13;
+				break;
+			}
+			else if (*str >= 'N' && *str <= 'Z')
+			{
+				*str = *str - 13;
+				break;
+			}
+			else
+			{
+				continue;
 			}
 		}
 		str++;
