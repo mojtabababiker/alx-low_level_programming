@@ -22,7 +22,7 @@ char *rot13(char *str)
 				*str = *str + 13;
 				break;
 			}
-		       	else if (*str >= 'n' && *str <= 'z')
+			else if (*str >= 'n' && *str <= 'z')
 			{
 				*str = *str - 13;
 				break;
