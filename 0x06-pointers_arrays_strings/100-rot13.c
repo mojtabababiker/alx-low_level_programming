@@ -11,22 +11,18 @@ char *rot13(char *str)
 	int i;
 	char *codedstr;
 
+	char chr[] =   "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char chr13[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
+
 	codedstr = str;
 
 	while (*str != '\0')
 	{
-		for (i = 0 ; i <= 13 ; i++)
+		for (i = 0 ; i <= 52 ; i++)
 		{
-			if ((*str >= 'a' && *str <= 'm') ||
-			    (*str >= 'A' && *str <= 'M'))
+			if (*str == chr[i])
 			{
-				*str = *str + 13;
-				break;
-			}
-			else if ((*str >= 'n' && *str <= 'z') ||
-				 (*str >= 'N' && *str <= 'Z'))
-			{
-				*str = *str - 13;
+				*str = chr13[i];
 				break;
 			}
 		}
