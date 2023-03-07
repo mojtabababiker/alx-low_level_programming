@@ -11,6 +11,8 @@ char *_strstr(char *haystack, char *needle)
 {
 	char *sub;
 	char *temp;
+	if (*haystack == '\0')
+		return (haystack);
 
 	temp = needle;
 
@@ -37,5 +39,5 @@ char *_strstr(char *haystack, char *needle)
 		}
 		haystack++;
 	}
-	return (haystack);
+	return (sub);
 }
