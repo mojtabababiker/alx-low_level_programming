@@ -10,6 +10,9 @@
 
 char *_strpbrk(char *s, char *accept)
 {
+	char *temp;
+
+	temp = accept;
 
 	while (*s != '\0')
 	{
@@ -17,9 +20,12 @@ char *_strpbrk(char *s, char *accept)
 		{
 			if (*s == *accept)
 				return (s);
+			printf("%c <=> %c\n", *accept, *s);
 			accept++;
 		}
+		accept = temp;
 		s++;
 	}
-	return (NULL);
+
+	return (temp = NULL);
 }
