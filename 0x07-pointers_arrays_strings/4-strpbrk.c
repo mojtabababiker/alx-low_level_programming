@@ -20,12 +20,11 @@ char *_strpbrk(char *s, char *accept)
 		{
 			if (*s == *accept)
 				return (s);
-			printf("%c <=> %c\n", *accept, *s);
 			accept++;
 		}
 		accept = temp;
 		s++;
 	}
-
-	return (temp = NULL);
+	temp = 0;
+	return (temp);
 }
