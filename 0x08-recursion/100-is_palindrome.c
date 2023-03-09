@@ -31,7 +31,7 @@ int is_palindrome(char *s)
 
 int checkpalindrome(char *s, int len)
 {
-	if (s > (s + (len - 1)) || (s == (s + (len - 1))))
+	if (s > (s + (len - 1))
 		return (1);
 	if (*s != *(s + (len - 1)))
 		return (0);
