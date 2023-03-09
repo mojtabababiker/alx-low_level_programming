@@ -12,6 +12,7 @@ int get_sqrt(int n, int odd)
 {
 	int sum;
 
+	odd += 2;
 	sum = 0;
 
 	if ((n - odd) == 0)
@@ -25,7 +26,7 @@ int get_sqrt(int n, int odd)
 	else
 	{
 		n = n - odd;
-		odd += 2;
+
 		return (sum + (get_sqrt(n, odd)));
 	}
 }
