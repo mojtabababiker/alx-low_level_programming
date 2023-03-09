@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * get_sqrt - calculate the square root for integer n
@@ -29,6 +30,7 @@ int get_sqrt(int n, int odd)
 		y = get_sqrt(n, odd);
 		sum = sum + y;
 	}
+	printf("%d", sum);
 	return (sum);
 }
 
