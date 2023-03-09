@@ -17,7 +17,7 @@ int is_palindrome(char *s)
 
 	if (len == 1 || len == 0)
 		return (1);
-	palindrome = checkpalindrome(s, (s + (len - 1));
+	palindrome = checkpalindrome(s, (s + (len - 1)));
 
 	return (palindrome);
 }
