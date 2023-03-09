@@ -11,10 +11,10 @@
 
 int get_sqrt(int n, int odd)
 {
-	int sum, y;
+	int sum;
 
 	odd += 2;
-	sum = 0;
+	sum = 1;
 
 	if ((n - odd) == 0)
 	{
@@ -26,11 +26,8 @@ int get_sqrt(int n, int odd)
 	}
 	else
 	{
-		n = n - odd;
-		y = get_sqrt(n, odd);
-		sum = sum + y;
+		sum = sum + get_sqrt(n - odd, odd);
 	}
-	printf("%d", sum);
 	return (sum);
 }
 
