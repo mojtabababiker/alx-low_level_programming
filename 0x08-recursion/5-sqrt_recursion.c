@@ -27,8 +27,9 @@ int get_sqrt(int n, int odd)
 	{
 		n = n - odd;
 
-		return (sum + (get_sqrt(n, odd)));
+		sum = sum + (get_sqrt(n, odd));
 	}
+	return (sum);
 }
 
 /**
