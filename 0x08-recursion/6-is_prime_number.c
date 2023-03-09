@@ -34,5 +34,5 @@ int primee(int n, int i)
 		return (0);
 
 	i++;
-	primee(n, i);
+	return (primee(n, i));
 }
