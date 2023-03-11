@@ -13,7 +13,7 @@ int wildcmp(char *s1, char *s2)
 {
 	int i = 0, j = 0, len1, len2;
 
-	lent1 = _strlen(s1);
+	len1 = _strlen(s1);
 	len2 = _strlen(s2);
 
 	return (_cmp(s1, s2, len1, len2, i, j));
