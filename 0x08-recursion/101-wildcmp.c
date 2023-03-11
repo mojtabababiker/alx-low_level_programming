@@ -1,7 +1,7 @@
 #include "main.h"
 
 int _cmp(char *s1, char *s2, int len1, int len2, int i, int j);
-int _strlen(char *s);
+int _strlen(char *s, int len);
 /**
  * wildcmp - compire using wild card *
  * @s1: first string
@@ -11,10 +11,10 @@ int _strlen(char *s);
 
 int wildcmp(char *s1, char *s2)
 {
-	int i = 0, j = 0, len1, len2;
+	int i = 0, j = 0, len1 = 1, len2 = 1;
 
-	len1 = _strlen(s1);
-	len2 = _strlen(s2);
+	len1 = _strlen(s1, len1);
+	len2 = _strlen(s2, len2);
 
 	return (_cmp(s1, s2, len1, len2, i, j));
 }
@@ -59,19 +59,15 @@ int _cmp(char *s1, char *s2, int len1, int len2, int i, int j)
 /**
  * _strlen - return the length of srting s
  * @s: string variable pointer
+ * @len: string len initail value
  * Return: length
  */
 
-int _strlen(char *s)
+int _strlen(char *s, int len)
 {
-	int length;
-
-	length = 0;
-
-	while (*s != '\0')
+	if (*s == '\0')
 	{
-		length++;
-		s++;
+		return (len);
 	}
-	return (length);
+	return (_strlen(++s, ++len));
 }
