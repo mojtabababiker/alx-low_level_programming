@@ -1,5 +1,6 @@
 #include "main.h"
 
+unsigned int _strlen(char *s);
 /**
  * _strdup - duplicate the str function
  * @str: the string to duplicate
@@ -11,17 +12,36 @@ char *_strdup(char *str)
 {
 	char *dup;
 	unsigned int i;
+	unsigned int lenstr;
 
 	if (str == NULL)
 		return (NULL);
-	dup = (char *) malloc(sizeof(str));
+
+	lenstr = _strlen(str);
+	dup = (char *) malloc(lenstr));
 
 	if (dup == NULL)
 		return (NULL);
-	for (i = 0 ; i < sizeof(str) ; i++)
+	for (i = 0 ; i < lenstr ; i++)
 	{
 		dup[i] = str[i];
 	}
 
 	return (dup);
+}
+
+/**
+ * _strlen - clculate the length of string s
+ * @s: string to get its length
+ * Return: length of s
+ */
+
+unsigned int _strlen(chra *s)
+{
+	static unsigned int lenstr = 1;
+
+	if (!*S)
+		return (lenstr);
+	lenstr++;
+	return (_stlen(++s));
 }
