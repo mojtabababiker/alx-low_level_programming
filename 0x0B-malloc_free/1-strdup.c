@@ -43,5 +43,5 @@ unsigned int _strlen(char *s)
 	if (!*s)
 		return (lenstr);
 	lenstr++;
-	return (_stlen(++s));
+	return (_strlen(++s));
 }
