@@ -18,7 +18,7 @@ char *_strdup(char *str)
 		return (NULL);
 
 	lenstr = _strlen(str);
-	dup = (char *) malloc(lenstr));
+	dup = (char *) malloc(lenstr);
 
 	if (dup == NULL)
 		return (NULL);
@@ -36,11 +36,11 @@ char *_strdup(char *str)
  * Return: length of s
  */
 
-unsigned int _strlen(chra *s)
+unsigned int _strlen(char *s)
 {
 	static unsigned int lenstr = 1;
 
-	if (!*S)
+	if (!*s)
 		return (lenstr);
 	lenstr++;
 	return (_stlen(++s));
