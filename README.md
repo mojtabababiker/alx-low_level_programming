@@ -45,3 +45,6 @@
   ### 0x0A-Args_Argv
       Command line argumants and how to creat C program that hve the ability to work with them
 
+  ### 0x0B-malloc_free
+      Dynamic memory allocation using malloc, interduce heap and stack concepts and how to controll memory addressing
+      
