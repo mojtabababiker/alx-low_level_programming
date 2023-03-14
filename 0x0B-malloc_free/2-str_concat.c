@@ -14,7 +14,7 @@ unsigned int _strlen(char *s);
 char *str_concat(char *s1, char *s2)
 {
 	char *ptr;
-	unsigned int len1, len2;
+	unsigned int len1, len2, i, j;
 
 	len1  = _strlen(s1);
 	len2 = _strlen(s2);
