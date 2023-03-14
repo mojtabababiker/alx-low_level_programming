@@ -18,7 +18,7 @@ char *str_concat(char *s1, char *s2)
 
 	len1  = _strlen(s1);
 	len2 = _strlen(s2);
-	ptr = (char *) malloc(sizeof(char)*((len1 + len2) - 1));
+	ptr = (char *) malloc(sizeof(char)*((len1 + len2) - 2));
 
 	if (ptr == NULL)
 		return (NULL);
@@ -49,7 +49,8 @@ char *str_concat(char *s1, char *s2)
 unsigned int _strlen(char *s)
 {
 	static unsigned int len = 1;
-
+	if (s == NULL)
+		return (1);
 	if (!*s)
 		return (len);
 	len++;
