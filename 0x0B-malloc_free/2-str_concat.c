@@ -1,6 +1,6 @@
 #include "main.h"
 
-char *_strdup(char *s, unsigned int len, char *ptr);
+char *_strdup2(char *s, unsigned int len, char *ptr);
 unsigned int _strlen(char *s);
 
 /**
@@ -24,13 +24,13 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 	if (s1 == NULL && s2 == NULL)
 	{
-		*ptr = '\0'
+		*ptr = '\0';
 		return (ptr);
 	}
 	if (s1 == NULL)
-		return (_strdup(s2, len2, ptr));
+		return (_strdup2(s2, len2, ptr));
 	if (s2 == NULL)
-		return (_strdup(s1), len1, ptr);
+		return (_strdup2(s1, len1, ptr);
 	for (i = 0 ; i < len1 - 1 ; i++)
 		ptr[i] = s1[i];
 	for (i = len1, j = 0 ; i < len2 ; i++, j++)
@@ -60,14 +60,14 @@ unsigned int _strlen(char *s)
 }
 
 /**
- * _strdup - duplicate s in new memory address
+ * _strdup2 - duplicate s in new memory address
  * @s: string to duplicate
  * @len: string s length
  * @ptr: new memory location pointer
  * Return: pointer to the new memory location
  */
 
-char *_strdup(char *s, unsigned int len, char *ptr)
+char *_strdup2(char *s, unsigned int len, char *ptr)
 {
 	unsigned int i;
 
