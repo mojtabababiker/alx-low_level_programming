@@ -30,7 +30,7 @@ char *str_concat(char *s1, char *s2)
 	if (s1 == NULL)
 		return (_strdup2(s2, len2, ptr));
 	if (s2 == NULL)
-		return (_strdup2(s1, len1, ptr);
+		return (_strdup2(s1, len1, ptr));
 	for (i = 0 ; i < len1 - 1 ; i++)
 		ptr[i] = s1[i];
 	for (i = len1, j = 0 ; i < len2 ; i++, j++)
@@ -50,10 +50,10 @@ unsigned int _strlen(char *s)
 {
 	static unsigned int len = 1;
 
-	if (s == NULL)
-		return (1);
 	if (!*s)
 		return (len);
+	if (s == NULL)
+		return (1);
 	len++;
 
 	return (_strlen(++s));
