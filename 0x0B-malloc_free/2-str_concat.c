@@ -18,7 +18,7 @@ char *str_concat(char *s1, char *s2)
 
 	len1  = _strlen(s1);
 	len2 = _strlen(s2);
-	ptr = (char *) malloc((len1 + len2) - 1);
+	ptr = (char *) malloc(sizeof(char)*((len1 + len2) - 1));
 
 	if (ptr == NULL)
 		return (NULL);
@@ -33,7 +33,7 @@ char *str_concat(char *s1, char *s2)
 		return (_strdup2(s1, len1, ptr));
 	for (i = 0 ; i < len1 - 1 ; i++)
 		ptr[i] = s1[i];
-	for (i = len1, j = 0 ; i < len2 ; i++, j++)
+	for (j = 0 ; j < len2 ; i++, j++)
 		ptr[i] = s2[j];
 	ptr[len2] = '\0';
 
@@ -52,8 +52,6 @@ unsigned int _strlen(char *s)
 
 	if (!*s)
 		return (len);
-	if (s == NULL)
-		return (1);
 	len++;
 
 	return (_strlen(++s));
