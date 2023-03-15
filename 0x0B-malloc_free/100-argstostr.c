@@ -1,5 +1,6 @@
 #include "main.h"
-
+#include <stdio.h>
+#include <string.h>
 /**
  * argstostr - concatenates program args
  * @ac: number of args
@@ -11,14 +12,16 @@ char *argstostr(int ac, char **av)
 {
 	char *ptr;
 
-	unsigned int i = 0, chars_counter = 0;
+	unsigned long int i = 0, chars_counter = 0;
 	int k, j;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
 
 	for (j = 0 ; j < ac ; j++)
-		chars_counter += sizeof(av[i]);
+	{
+		chars_counter += strlen(av[j]) + 1;
+	}
 	ptr = (char *) malloc(chars_counter + 1);
 
 	if (ptr == NULL)
