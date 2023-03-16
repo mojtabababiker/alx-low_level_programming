@@ -4,7 +4,7 @@
  * _calloc - simulate calloc C stander function
  * @nmemb: number of memoru blocks to allocate
  * @size: size of each block
- * return: a void pointer to the base of allocated blocks
+ * Return: a void pointer to the base of allocated blocks
  */
 
 void *_calloc(unsigned int nmemb, unsigned int size)
