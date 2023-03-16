@@ -16,7 +16,7 @@ char **strtow(char *str)
 	int words, i = 0, j = 0, chars = 0;
 	int con = 0;
 
-	if (str == NULL || *str == "")
+	if (str == NULL || *str == '\0')
 		return (NULL);
 
 	words = countwords(str);
