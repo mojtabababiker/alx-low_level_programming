@@ -10,14 +10,55 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	unsigned int i;
-	char *ptr;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
-	ptr = malloc(nmemb * size);
-	if (ptr == NULL)
-		return (NULL);
-	for (i = 0 ; i < nmemb * size ; i = i + size)
-		ptr[i] = 0;
-	return (ptr);
+
+	if (size == sizeof(int))
+	{
+		int *ptr = malloc(nmemb * size);
+                if (ptr == NULL)
+                return (NULL);
+                for (i = 0 ; i < nmemb * size ; i = i + size)
+                        ptr[i] = 0;
+                return (ptr);
+	}
+	else if (size == sizeof(long))
+	{
+                long *ptr = malloc(nmemb * size);
+                if (ptr == NULL)
+                return (NULL);
+                for (i = 0 ; i < nmemb * size ; i = i + size)
+                        ptr[i] = 0;
+                return (ptr);
+	}
+	else if (size == sizeof(double))
+	{
+                double *ptr = malloc(nmemb * size);
+                if (ptr == NULL)
+                return (NULL);
+                for (i = 0 ; i < nmemb * size ; i = i + size)
+                        ptr[i] = 0;
+                return (ptr);
+	}
+	else if (size == sizeof(float))
+	{
+                float *ptr = malloc(nmemb * size);
+                if (ptr == NULL)
+                return (NULL);
+                for (i = 0 ; i < nmemb * size ; i = i + size)
+                        ptr[i] = 0;
+                return (ptr);
+	}
+	else
+	{
+		char *ptr = malloc(nmemb * size);
+		if (ptr == NULL)
+                return (NULL);
+		for (i = 0 ; i < nmemb * size ; i = i + size)
+			ptr[i] = 0;
+		return (ptr);
+	}
+
+	return (NULL);
 }
