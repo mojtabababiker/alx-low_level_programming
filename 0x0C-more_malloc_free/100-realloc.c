@@ -31,7 +31,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		return (ptr);
 	}
 	nptr = malloc(new_size);
-	printf("adrresss of nptr is : %p\n", nptr);
+
 	if (nptr == NULL)
 	{
 		return (NULL);
@@ -43,7 +43,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		free(ptr);
 		return ((void *)nptr);
 	}
-	for (i = 0 ; i <= new_size ; i++)
+	for (i = 0 ; i < new_size ; i++)
 		nptr[i] = ptr1[i];
 	free(ptr);
 	return ((void *)nptr);
