@@ -5,7 +5,7 @@
  * @array: pointer to int array to search from
  * @size: number of elements in array
  * @cmp: pointer to compire function
- * @Return: index of the wanted int, -1 if no element found
+ * Return: index of the wanted int, -1 if no element found
  *          or size is less than or equal to 0
  */
 
