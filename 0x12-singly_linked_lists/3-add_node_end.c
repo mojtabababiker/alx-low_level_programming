@@ -16,27 +16,31 @@ list_t *add_node_end(list_t **head, const char *str)
 		return (NULL);
 	new  = malloc(sizeof(list_t));
 	if (new == NULL)
-		return (NULL);
-	/*test the str pointer*/
-	if (str == NULL)
 	{
+		free(temp->str);
+		free(temp);
+		return (NULL);
+	}
+	if (str == NULL)
+	{	/*test the str pointer*/
+		free(new->str);
+		free(temp->str);
 		free(new);
 		free(temp);
 		return (NULL);
 	}
 	new->str = strdup(str);
 	new->len = strlen(str);
-	/*first element in the list_t list*/
 	if (*head == NULL)
-	{
+	{	/*first element in the list_t list*/
 		new->next = NULL;
 		*head = new;
+		free(temp);
 		return (new);
 	}
-	/*search for the last element in list_t list*/
 	temp->next = *head;
 	while ((*head)->next != NULL)
-	{
+	{	/*search for the last element in list_t list*/
 		(*head) = (*head)->next;
 	}
 	(*head)->next = new;
