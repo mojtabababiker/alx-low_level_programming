@@ -1,4 +1,4 @@
-#include "main.h"
+#include "lists.h"
 
 /**
  * free_list - free all elements of list_t list
