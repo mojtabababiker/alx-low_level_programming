@@ -18,16 +18,10 @@ list_t *add_node_end(list_t **head, const char *str)
 	if (new == NULL)
 		return (NULL);
 	/*test the str pointer*/
-	if (str != NULL)
-	{
-		new->str = strdup(str);
-		new->len = strlen(str);
-	}
-	else
-	{
-		new->str = NULL;
-		new->len = 0;
-	}
+	if (str == NULL)
+		return (NULL);
+	new->str = strdup(str);
+	new->len = strlen(str);
 	/*first element in the list_t list*/
 	if (*head == NULL)
 	{
