@@ -12,9 +12,9 @@ size_t list_len(const list_t *h)
 
 	if (h == NULL)
 		return (number_of_elements);
-	while (h->next != NULL)
+	while (h != NULL)
 	{
-		number_of_elements += 2;
+		number_of_elements++;
 		h = h->next;
 	}
 	return (number_of_elements);
