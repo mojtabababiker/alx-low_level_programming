@@ -2,7 +2,7 @@
 
 /**
  * add_nodeint_end - add new node to the end if the list
- * @h: address of the list head pointer
+ * @head: address of the list head pointer
  * @n: list n value
  * Return: pointer to the new node
  */
