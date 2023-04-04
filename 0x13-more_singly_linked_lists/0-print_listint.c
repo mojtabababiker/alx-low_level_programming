@@ -33,6 +33,11 @@ size_t print_listint(const listint_t *h)
  */
 void print_num(int num)
 {
+	if (num < 0)
+	{
+		_putchar('-');
+		num = -num;
+	}
 	if (num / 10 == 0)
 	{
 		_putchar(num + '0');
