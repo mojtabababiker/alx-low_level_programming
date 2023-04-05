@@ -1,6 +1,6 @@
 #include "lists.h"
 
-void print_num(int num);
+/*void print_num(int num);*/
 
 /**
  * print_listint - print all list_t elemnents
@@ -17,12 +17,10 @@ size_t print_listint(const listint_t *h)
 
 	while (h != NULL)
 	{
-		print_num(h->n);
+		printf("%d\n", h->n);
 		h = h->next;
 		no_elem++;
-		_putchar(10);
 	}
-
 	return (no_elem);
 }
 
@@ -31,7 +29,7 @@ size_t print_listint(const listint_t *h)
  * @num: integer number to print
  * Return: void
  */
-void print_num(int num)
+/*void print_num(int num)
 {
 	if (num < 0)
 	{
@@ -46,3 +44,4 @@ void print_num(int num)
 	print_num(num / 10);
 	_putchar(num % 10 + '0');
 }
+*/
