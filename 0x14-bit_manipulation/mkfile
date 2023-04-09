@@ -1,0 +1,17 @@
+#!/bin/bash
+
+echo "file name"
+read file
+betty $file
+git add $file
+echo "commit message"
+read message
+git commit -m "$message"
+echo "push?"
+read choice
+if choice=='y'
+   then
+       git push
+else
+    echo "OK, thanks"
+fi
