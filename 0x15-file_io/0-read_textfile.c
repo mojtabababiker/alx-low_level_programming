@@ -21,12 +21,13 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	fd = open(filename, O_RDONLY);
 	if (fd < 0)/*failed to open the file*/
 		return (-1);
-	buffer = malloc(sizeof(char) * (letters + 1));
+	buffer = malloc(sizeof(char) * letters);
 	if (buffer == NULL)
 		return (0);
 	/*init the values of bufer before use it*/
 	for (i = 0 ; i < letters ; i++)
 		buffer[i] = 0;
+
 	printed_chars = read(fd, buffer, letters);
 	if (printed_chars > 0)
 		printf("%s", buffer);
