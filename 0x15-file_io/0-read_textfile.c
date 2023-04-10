@@ -28,7 +28,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	for (i = 0 ; i < letters ; i++)
 		buffer[i] = 0;
 	printed_chars = read(fd, buffer, letters);
-	printf("%s", buffer);
+	if (printed_chars > 0)
+		printf("%s", buffer);
 	free(buffer);
 	close(fd);
 	return (printed_chars);
