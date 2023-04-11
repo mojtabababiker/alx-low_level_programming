@@ -88,7 +88,7 @@ int copy_from_file(int *fd1, char *src_name, int *fd2, char *dest_name)
 		write_value = write(*fd2, buffer, 1024);
 		if (write_value < 0)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write %s\n",
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n",
 				dest_name);
 			exit(99);
 		}
