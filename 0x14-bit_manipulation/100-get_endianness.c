@@ -10,8 +10,8 @@ int get_endianness(void)
 
 	unsigned int multi_bytes = 0x8000;
 
-	first_byte = (char *) &multi_bytes;
-	if (first_bit)
+	first_bit = (char *) &multi_bytes;
+	if (*first_bit == '1')
 		return (0);
 	return (1);
 }
