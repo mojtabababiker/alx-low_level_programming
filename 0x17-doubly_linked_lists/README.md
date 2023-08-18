@@ -2,13 +2,15 @@
 
   `Linked list` is one of the most efficient and wide used `data structure` among all the HL programming languegs, the basic structure of `linked list` is a block in memory consists of a subblock for `data` and another as a pointer to the next [prevoius] or [both] node depending on the type of the `linked list`, and each block caclled `node`.
 
-  *`Linked list` can have three main types:*
+ **`Linked list` have three main types:**
 
   . `Singly linked list`: in this type the `node` consists of a block for `Data` and a block as pointer to the next `node` in the list, the last `node` in this type will always point to `NULL`.
+
   . `Doubly linked list`: in this type each `node` consists of three blocks, one for the `Data` and the other two are pointer blocks, one for the `next node` and the other for `previous node`, in the `Doubly linked list` the first node will have `NULL` as the `previous node` pointer, and the last node will have 'NULL' as the 'next node` pointer. This type will be our supject for the below projects.
+
   . 'Circular linked list`: from its name it can be consider as a circle of `data` and `node pointers`, the diffrences between it and the `Doubly linked list` in `Circular linked list` the `first node` will have the `previous node` pointer set to the `last node`, and the `last node` will have `next node` pointer set to the `first node`.
 
-
+# Project Tasks
 
 ## 0-print_dlistint.c
 
