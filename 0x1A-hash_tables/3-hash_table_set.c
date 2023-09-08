@@ -71,3 +71,14 @@ int insert_node(hash_node_t *node, hash_table_t *table,
 	table->array[index] = node;
 	return (1);
 }
+
+/**
+ * free_node - free a single node
+ * @h_node: the node to be free'd
+ */
+void free_node(hash_node_t *h_node)
+{
+	h_node->next = NULL;
+	free(h_node->value);
+	free(h_node);
+}

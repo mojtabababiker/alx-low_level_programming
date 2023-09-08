@@ -23,14 +23,3 @@ void hash_table_delete(hash_table_t *ht)
 	free(ht->array);
 	free(ht);
 }
-
-/**
- * free_node - free a single node
- * @h_node: the node to be free'd
- */
-void free_node(hash_node_t *h_node)
-{
-	h_node->next = NULL;
-	free(h_node->value);
-	free(h_node);
-}
