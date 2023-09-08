@@ -83,6 +83,7 @@ int insert_node(hash_node_t *h_node, hash_node_t *node,
 			if (prev != NULL)
 				prev->next = node;
 			free_node(h_node);
+			table->array[index] = node;
 			return (1);
 		}
 		prev = h_node;
