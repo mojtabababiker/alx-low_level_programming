@@ -24,8 +24,11 @@ void hash_table_print(const hash_table_t *ht)
 			printf("'%s': '%s'", arry[i]->key, arry[i]->value);
 			print_list(arry[i]->next);
 		}
-		if (arry[i + 1] != NULL && notfirstElement)
-			printf(", ");
+		if (i != ht->size - 1)
+		{
+			if (arry[i + 1] != NULL && notfirstElement)
+				printf(", ");
+		}
 	}
 	printf("}\n");
 }
