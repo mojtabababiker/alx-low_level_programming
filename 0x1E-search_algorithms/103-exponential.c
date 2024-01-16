@@ -9,17 +9,20 @@ int search(int *array, size_t start, size_t end, int value);
  * @value: the value to be searched
  * Return: the index of the first appeariance of value, or -1
  */
-int exponential_search(int *array, size_t size, int value) {
+int exponential_search(int *array, size_t size, int value)
+{
 	size_t i = 1, j = 1;
 
 	if (!array)
 		return (-1);
 
-	while (i < size && array[i] < value) {
+	while (i < size && array[i] < value)
+	{
 		printf("Value checked array[%ld] = [%d]\n", i, array[i]);
 		i *= 2;
 	}
-	if (i >= size) {
+	if (i >= size)
+	{
 		j = i / 2;
 		i = size - 1;
 	}
@@ -37,14 +40,16 @@ int exponential_search(int *array, size_t size, int value) {
  * @value: the value to search for
  * Return: the index of first appeariance of value or -1
  */
-int search(int *array, size_t start, size_t end, int value) {
+int search(int *array, size_t start, size_t end, int value)
+{
 	int mid = (start + end) / 2;
 	size_t i = 0;
 
 	if (start > end)
 		return (-1);
 	printf("Searching in array: ");
-	for (i = start; i <= end; i++) {
+	for (i = start; i <= end; i++)
+	{
 		if (i == end)
 			printf("%d\n", array[i]);
 		else
@@ -55,7 +60,8 @@ int search(int *array, size_t start, size_t end, int value) {
 	if (value > array[mid])
 		return (search(array, mid + 1, end, value));
 	/* if the value is less than the mid value */
-	if (mid - 1 < 0) {
+	if (mid - 1 < 0)
+	{
 		printf("Searching in array: %d\n", array[mid]);
 		return (-1);
 	}
