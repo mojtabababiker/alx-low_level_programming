@@ -41,7 +41,10 @@ int search(int *array, size_t size, size_t start, size_t end, int value)
 	printf("Value checked array[%ld] = [%d]\n", mid, array[mid]);
 
 	if (start > end)
+	{
+		printf("Value checked array[%ld] is out of range\n", mid);
 		return (-1);
+	}
 	if (value == array[mid])
 		return (mid);
 	if (value > array[mid])
