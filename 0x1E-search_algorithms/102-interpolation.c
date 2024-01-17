@@ -31,7 +31,7 @@ int search(int *array, size_t size, size_t start, size_t end, int value)
 		((double)(end + start) / (array[end] - array[start])) *
 		(value - array[start]));
 
-	if (array[start] == array[end])
+	if (start <= end && array[start] == array[end])
 	{
 		if (array[start] == value)
 		{
@@ -39,11 +39,9 @@ int search(int *array, size_t size, size_t start, size_t end, int value)
 			       , start, array[start]);
 			return (start);
 		}
-		printf("Value checked array[%ld] is out of range\n", mid);
-		return (-1);
 	}
 
-	if (mid >= size || value < array[start] || value > array[end])
+	if (mid >= size)
 	{
 		printf("Value checked array[%ld] is out of range\n", mid);
 		return (-1);
@@ -62,4 +60,3 @@ int search(int *array, size_t size, size_t start, size_t end, int value)
 	/* if the value is less than the mid value */
 	return (search(array, size, start, mid - 1, value));
 }
-
