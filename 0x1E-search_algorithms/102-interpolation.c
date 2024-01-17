@@ -13,6 +13,16 @@ int interpolation_search(int *array, size_t size, int value)
 {
 	if (!array)
 		return (-1);
+	if (array[0] == array[size - 1])
+	{
+		if (array[0] == value)
+		{
+			printf("Value checked array[%ld] = [%d]\n"
+			       , 0, array[0]);
+			return (0);
+		}
+	}
+
 	return (search(array, size, 0, size - 1, value));
 }
 
@@ -30,16 +40,6 @@ int search(int *array, size_t size, size_t start, size_t end, int value)
 	size_t mid = start + (
 		((double)(end + start) / (array[end] - array[start])) *
 		(value - array[start]));
-
-	if (start <= end && end < size && array[start] == array[end])
-	{
-		if (array[start] == value)
-		{
-			printf("Value checked array[%ld] = [%d]\n"
-			       , start, array[start]);
-			return (start);
-		}
-	}
 
 	if (mid >= size)
 	{
