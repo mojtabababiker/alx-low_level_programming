@@ -31,7 +31,7 @@ int search(int *array, size_t size, size_t start, size_t end, int value)
 		((double)(end + start) / (array[end] - array[start])) *
 		(value - array[start]));
 
-	if (start <= end && array[start] == array[end])
+	if (start <= end && end < size && array[start] == array[end])
 	{
 		if (array[start] == value)
 		{
