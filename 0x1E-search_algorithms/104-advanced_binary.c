@@ -42,6 +42,13 @@ int search(int *array, size_t start, size_t end, int value)
 		else
 			printf("%d, ", array[i]);
 	}
+	if (start == end)
+	{
+		if (array[start] == value)
+			return (start);
+		return (-1);
+	}
+
 	mid = (start + end) / 2;
 	res = array[mid];
 	if (res == value)
@@ -53,6 +60,6 @@ int search(int *array, size_t start, size_t end, int value)
 	if (res < value)
 		return (search(array, mid + 1, end, value));
 	if (mid - 1 < 0)
-		return (-1);
+		return (search(array, start, mid, value));
 	return (search(array, start, mid - 1, value));
 }
